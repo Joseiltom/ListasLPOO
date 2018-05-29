@@ -13,9 +13,12 @@ package ListaJava1;
 public class Exercicio02 {
         public static void main(String[] args){
             Scanner entrada = new Scanner(System.in);
-            double m = entrada.nextInt();
-            double p = entrada.nextInt();
-            double resultado = Math.pow((m/p), 5);
-            System.out.println(resultado);
+            double distancia = entrada.nextDouble();
+            if(distancia > 12.0){
+                System.out.printf("A distancia informada nunca seria alcançada.");
+            }
+            else{
+                System.out.printf("A onda demorou %.2f minutos para alcançar essa distancia",((distancia/20)*60));
+            }
         }
 }
